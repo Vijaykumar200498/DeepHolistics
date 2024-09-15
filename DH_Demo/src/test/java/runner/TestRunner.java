@@ -5,15 +5,14 @@ import io.cucumber.testng.CucumberOptions;
 import io.cucumber.testng.CucumberOptions.SnippetType;
 
 @CucumberOptions(
-		features = {"src/test/java/features"},
+		features = {"src/test/resources/features"},
 		dryRun = !true,
-		glue = "steps",
+		glue = {"steps","hooks"},
 		snippets = SnippetType.CAMELCASE,
-		plugin = {"pretty","html:reports"}
+		
+		plugin = {"pretty","html:reports","com.aventstack.extentreports.cucumber.adapter.ExtentCucumberAdapter:"},
+		tags = ""
 		)
-
-
-
 
 
 public class TestRunner extends AbstractTestNGCucumberTests{
