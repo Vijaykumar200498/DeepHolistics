@@ -1,7 +1,5 @@
 package steps;
 
-import java.net.MalformedURLException;
-
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.testng.Assert;
@@ -15,27 +13,14 @@ import io.cucumber.java.en.Then;
 
 public class LoginStep extends DriverInstance {
 
-	// wait = new WebDriverWait(driver, Duration.ofSeconds(10));
 
 	@Given("Launching the app")
-	public void launchingTheApp() throws InterruptedException, MalformedURLException {
-		/*
-		 * UiAutomator2Options options = new UiAutomator2Options();
-		 * options.setAutomationName("UiAutomator2").setPlatformName("Android").
-		 * setPlatformVersion("14")
-		 * .setApp("C:\\Users\\91860\\Desktop\\APK\\dh_stg_1.0.9.apk").
-		 * setIgnoreHiddenApiPolicyError(true)
-		 * .setAppPackage("com.deepholistics.android.staging") .setAppActivity(
-		 * "com.deepholistics.android.ui.user.htOnboarding.welcome.WelcomeActivity")
-		 * .setNoReset(true).setAutoGrantPermissions(false);
-		 * 
-		 * URL url = new URL("http://127.0.0.1:4723/"); driver = new AndroidDriver(url,
-		 * options);
-		 */
+	public void launchingTheApp() throws InterruptedException {
+
 		System.out.println("App Launched Successfully");
 		Thread.sleep(5000);
 	}
-
+	
 	@Given("Verify the launch")
 	public void verifyTheLaunch() {
 
@@ -138,7 +123,7 @@ public class LoginStep extends DriverInstance {
 		countrySelect.click();
 
 	}
-
+	
 	@Then("Select the country code1")
 	public void selectTheCountryCode1() throws InterruptedException {
 
@@ -270,5 +255,6 @@ public class LoginStep extends DriverInstance {
 		driver.quit();
 
 	}
+	
 
 }

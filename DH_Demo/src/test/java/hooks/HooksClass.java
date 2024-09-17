@@ -19,11 +19,12 @@ public class HooksClass extends DriverInstance {
 	public void beforeScenario(Scenario scenario) throws MalformedURLException { // Scenario is interface
 
 		UiAutomator2Options options = new UiAutomator2Options();
-		options.setAutomationName("UiAutomator2").setPlatformName("Android").setPlatformVersion("14")
+		options.setAutomationName("UiAutomator2").setPlatformName("Android").setPlatformVersion("15")
 				.setApp("C:\\Users\\91860\\Desktop\\APK\\dh_stg_1.0.9.apk")
 				.setIgnoreHiddenApiPolicyError(true)
 				.setAppPackage("com.deepholistics.android.staging")
 				.setAppActivity("com.deepholistics.android.ui.user.htOnboarding.welcome.WelcomeActivity")
+//				.setAdbExecTimeout("6000")
 				.setNoReset(true).setAutoGrantPermissions(true);
 
 		URL url = new URL("http://127.0.0.1:4723/");

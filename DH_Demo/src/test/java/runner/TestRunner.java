@@ -7,11 +7,9 @@ import io.cucumber.testng.CucumberOptions.SnippetType;
 @CucumberOptions(
 		features = {"src/test/resources/features"},
 		dryRun = !true,
-		glue = {"steps","hooks"},
+		glue = {"steps","hooks"},		
 		snippets = SnippetType.CAMELCASE,
-		
-		plugin = {"pretty","html:reports","com.aventstack.extentreports.cucumber.adapter.ExtentCucumberAdapter:"},
-		tags = ""
+		plugin = {"pretty","html:reports","com.aventstack.extentreports.cucumber.adapter.ExtentCucumberAdapter:"}
 		)
 
 
